@@ -44,6 +44,14 @@ http://groups.google.com/group/websocketpp-announcements/
 **Discussion / Development / Support Mailing List / Forum**
 http://groups.google.com/group/websocketpp/
 
+** How to build [taikt]
+cd websocketpp/
+mkdir build && cd build
+cmake -DENABLE_CPP11=TRUE -DBUILD_EXAMPLES=TRUE -DBUILD_TESTS=TRUE ..
+make
+make install
+
+
 Author
 ======
 Peter Thorson - websocketpp@zaphoyd.com
