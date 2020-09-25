@@ -45,6 +45,7 @@ http://groups.google.com/group/websocketpp-announcements/
 http://groups.google.com/group/websocketpp/
 
 ** How to build [taikt]
+Ref: https://github.com/zaphoyd/websocketpp/issues/769
 
 cd websocketpp/
 
