@@ -44,9 +44,13 @@ http://groups.google.com/group/websocketpp-announcements/
 **Discussion / Development / Support Mailing List / Forum**
 http://groups.google.com/group/websocketpp/
 
-** How to build [taikt]
+** [taikt] 
+
+-- How to build
 
 cd websocketpp/
+sudo apt-get update -y
+sudo apt-get install -y libasio-dev
 
 mkdir build && cd build
 
@@ -55,6 +59,37 @@ cmake -DENABLE_CPP11=TRUE -DBUILD_EXAMPLES=TRUE -DBUILD_TESTS=TRUE ..
 make
 
 make install
+
+-- run test code
+
+cd tutorials/utility_server
+
+g++ -std=c++11 step2.cpp -lboost_system -D_WEBSOCKETPP_CPP11_STL_ -I../../. -lpthread
+
+./a.out
+
+cd tutorials/utility_client
+
+g++ -std=c++11 step6.cpp -lboost_system -D_WEBSOCKETPP_CPP11_STL_ -I../../. -lpthread
+
+./a.out
+
+(note: -I../../. to point to websocketpp directory)
+
+from client (a.out), send connection:
+
+Enter Command: connect ws://localhost:9002
+
+check return ID(i.e 0), send message to server
+
+Enter Command: send 0 hello
+
+tutorial:
+
+https://github.com/taikt/websocketpp/blob/master/tutorials/utility_client/utility_client.md
+
+https://github.com/taikt/websocketpp/blob/master/tutorials/utility_server/utility_server.md
+
 
 
 Author
