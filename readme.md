@@ -44,12 +44,15 @@ http://groups.google.com/group/websocketpp-announcements/
 **Discussion / Development / Support Mailing List / Forum**
 http://groups.google.com/group/websocketpp/
 
-** [taikt] 
 
--- How to build
+** How to build [taikt]
+
+Ref: https://github.com/zaphoyd/websocketpp/issues/769
 
 cd websocketpp/
+
 sudo apt-get update -y
+
 sudo apt-get install -y libasio-dev
 
 mkdir build && cd build
